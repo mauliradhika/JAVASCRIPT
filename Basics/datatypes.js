@@ -17,4 +17,31 @@ let state;
 */
 
 //object
-console.log(typeof null);// null is an object; undefined's type is undefined
+console.log(typeof null);// null's type is an object; undefined's type is undefined
+
+//Primitive : 7 types : String, Number, Boolean, Null, Undefined, Symbol, BigInt
+
+//Reference (Non Primitive) : Array, Objects, Functions
+
+//JS is dynamically typed language
+
+//Memory - Stack (Primitive), Heap (Non-Primitive)
+
+let myYtName = "mauli";
+let anotherName = myYtName;
+anotherName = "pihu";
+
+console.log(myYtName);
+console.log(anotherName);
+
+let userOne = {
+    email : "user@google.com",
+    upi : "user@ybl"
+}
+
+let userTwo = userOne;
+
+userTwo.email = "mauli@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
