@@ -48,3 +48,18 @@ console.log(twitterUser);
 
 console.log(Object.keys(twitterUser));
 console.log(twitterUser.hasOwnProperty('isLoggedIn'));
+
+const course = {
+    courseName: "JavaScript",
+    price: "999",
+    teacher: "marilyn"
+}
+//Destructure
+const {teacher: instructor} = course //After doing this we don't have to use dot operator everywhere
+//console.log(teacher);
+console.log(instructor);
+
+const navbar = ({company}) =>{
+
+}
+navbar(company = "Google")
