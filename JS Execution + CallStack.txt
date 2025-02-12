@@ -1,0 +1,61 @@
+JAVASCRIPT EXECUTION CONTEXT: 
+//JS is single threaded
+
+Type of Execution Context:
+    1. {} : Global Execution Context: referred to this 
+    2. Function/Functional Execution Context: 
+    3. Eval Execution Context: 
+
+2 Phases:
+    1. Memory Creation Phase/Creation Phase: Memory Allocation
+    2. Execution Phase: Calculations   
+
+{
+    let v1 = 10
+    let v2 = 5
+    function addNum(n1, n2){
+        let total = n1+n2;
+        return total
+    }
+    let res = addNum(v1, v2);
+    let res1 = addNum(10,2);
+}
+
+STEPS OF ABOVE CODE:
+    1. Global Execution/Environment: Allocation to this
+    2. Memory Creation Phase: Holds the variable and undefined is stores in them
+        v1 -> undefined
+        v2 -> undefined
+        addNum -> defination of function (whole function)
+        res -> undefined
+        res1 -> undefined
+    3. Execution Phase:
+        v1 <- 10
+        v1 <- 5
+        addNum -> Different Executional Context: new variable environment + execution threaded
+                    1.Memory Phase: 
+                        v1 -> undefined
+                        v2 -> undefined
+                        total -> undefined
+                    2.Execution Context:
+                        n1 <- 10
+                        n2 <- 5
+                        total <- 15 //return to Global Executional Context
+                    //DELETED AFTER THE WORK IS DONE
+        res = 15
+        res1 =  Different Executional Context: new variable environment + execution threaded
+                    1.Memory Phase: 
+                        v1 -> undefined
+                        v2 -> undefined
+                        total -> undefined
+                    2.Execution Context:
+                        n1 <- 10
+                        n2 <- 2
+                        total <- 12 //return to Global Executional Context
+                    //DELETED AFTER THE WORK IS DONE
+    Code Completed.
+
+CALLSTACK: 
+    1. Global Execution Context           
+    2. Method enters in the stack to be executed and is removed after completion.
+            LIFO - Last In First Out 
