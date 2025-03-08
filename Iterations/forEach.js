@@ -34,5 +34,12 @@ const myCoding = [
 ]
 
 myCoding.forEach( (item) => {
-    console.log(item.languageName);
+    //console.log(item.languageName);
 })
+
+const values = coding.forEach( (item) => {
+    //console.log(item);
+    return item;
+})
+
+console.log(values);//undefined -> forEach loop doesn't return any value
