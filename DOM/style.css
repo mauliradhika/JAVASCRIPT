@@ -1,0 +1,22 @@
+h1 {
+    color: blue;
+    font-size: large;
+    text-decoration: wavy;
+}
+
+body{
+    background-color: burlywood;
+}
+
+button{
+    background-color: bisque;
+    color: aqua;
+}
+
+#para {
+    color: blueviolet;
+}
+
+.new{
+    font-size: x-large;
+}
