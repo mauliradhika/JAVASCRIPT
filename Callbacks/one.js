@@ -1,3 +1,5 @@
+//Basics: 
+
 function sum(a, b){
     console.log(a+b)
 }
@@ -15,5 +17,29 @@ const hello = () => {
     console.log("Hello!!")
 }
 
-setTimeout(hello, 3000);
+setTimeout(hello, 1000);
 
+//Callback Hell:
+
+function getData(dataId){
+    setTimeout( () => { 
+        console.log("data", dataId) 
+    } , 2000)
+}
+
+function getData1(dataId, getNextData){
+    setTimeout( () => { 
+        console.log("data", dataId) 
+        if(getNextData){
+            getNextData();
+        }
+    } , 2000)
+}
+
+getData1(1, () => {
+    console.log("getting data2 ...")
+    getData1(2, () => {
+        console.log("getting data3 ...")
+        getData1(3);
+    });
+} );
